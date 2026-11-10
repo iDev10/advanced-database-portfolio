@@ -1,0 +1,50 @@
+{
+    "delivery_id": 1001,
+    "customer": {
+      "customer_id": 1,
+      "name": "Adebayo Johnson",
+      "email": "adebayojohnson@demo.com"
+    },
+    "hub": {
+      "hubs_id": 1,
+      "hub_name": "Ikeja Luxury Hub"
+    },
+    "sweeper": {
+      "sweeper_id": 1,
+      "name": "John Adisa"
+    },
+    "pickup_address": "Ikeja, Lagos",
+    "delivery_address": "Yaba, Lagos",
+    "delivery_status": "In Transit",
+    "delivery_fee": 2500.00,
+    "requested_at": {
+      "$date": "2026-11-10T10:00:00Z"
+    }
+  },
+
+  {
+    "delivery_id": 1002,
+    "customer": {
+      "customer_id": 2,
+      "name": "Nancy Oge",
+      "email": "nancyoge@demo.com"
+    },
+    "hub": {
+      "hubs_id": 2,
+      "hub_name": "Lekki Hub"
+    },
+    "sweeper": {
+      "sweeper_id": 2,
+      "name": "Chike Obi"
+    },
+    "pickup_address": "Lekki, Lagos",
+    "delivery_address": "Victoria Island, Lagos",
+    "delivery_status": "Delivered",
+    "delivery_fee": 3500.00,
+    "requested_at": {
+      "$date": "2026-11-10T11:30:00Z"
+    },
+    "delivered_at": {
+      "$date": "2026-11-10T13:00:00Z"
+    }
+  }

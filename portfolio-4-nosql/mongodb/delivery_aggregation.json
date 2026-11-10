@@ -1,0 +1,16 @@
+{
+    "$group":
+      /**
+	* _id: The id of the group.
+ 	* fieldN: The first field name.
+ 	*/
+      {
+  		"_id": "$delivery_status",
+  		"total_deliveries": {
+    			"$sum": 1
+  		},
+  		"total_delivery_fees": {
+    			"$sum": "$delivery_fee"
+ 		 }
+	}
+}
