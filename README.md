@@ -48,7 +48,7 @@ Purpose of AI assistance: ChatGPT was used as a learning and development assista
 Review, correction and verification: AI-generated suggestions were not accepted without practical review. I executed the commands and scripts in the local database environments, inspected query results and execution plans, checked transaction behaviour, verified replica-set membership and data replication, and confirmed shard distribution through MongoDB commands. Errors encountered during implementation, including a database naming typo, were identified and corrected. Screenshots and saved outputs were retained as evidence of practical implementation. Performance results were based on observed executions rather than assumed AI-generated values.
 I remain responsible for configuring the environments, executing and testing the implementations, reviewing outputs, correcting errors and organising the final deliverables.
 
-5. Conclusion
+6. ConclusioN
 The project provided practical experience in relational and NoSQL database technologies, query performance optimisation, transaction management, concurrency control, replication and sharding. It demonstrated how different database approaches can support the operational and scalability requirements of a logistics platform. The work also strengthened practical skills in database administration, troubleshooting, technical documentation and version control.
 
 References
