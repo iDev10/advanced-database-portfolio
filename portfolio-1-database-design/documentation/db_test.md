@@ -1,48 +1,17 @@
-#### \# TrustSend25 Database Testing and Integrity Verification
+**TrustSend25 Database Testing and Integrity Verification**
 
+Practical tests were conducted on the TrustSend25 MySQL database to verify table relationships, referential integrity, and database constraints. The tests were performed using MySQL Workbench against the "trustsend25_db" database.
 
-
-\## 1. Introduction
-
-
-
-Practical tests were conducted on the TrustSend25 MySQL database to verify table relationships, referential integrity, and database constraints.
-
-
-
-The tests were performed using MySQL Workbench against the `trustsend25\_db` database.
-
-
-
-\## 2. Relationship Verification
-
-
-
+**Relationship Verification**
 An SQL JOIN query was executed to retrieve delivery records alongside their associated customer, hub, and sweeper information.
-
-
-
 The query used:
+- INNER JOIN to retrieve the associated customer.
+- LEFT JOIN to retrieve hub information.
+- LEFT JOIN to retrieve sweeper information.
+The query executed successfully and returned the expected relational data.
 
-\- INNER JOIN to retrieve the associated customer.
-
-\- LEFT JOIN to retrieve hub information.
-
-\- LEFT JOIN to retrieve sweeper information.
-
-
-
-\*\*Result:\*\* The query executed successfully and returned the expected relational data.
-
-
-
-\## 3. Referential Integrity Testing
-
-
-
+**Integrity Testing**
 Three tests were conducted to identify orphaned references:
-
-
 
 | Test | Expected result | Actual result |
 
@@ -54,51 +23,15 @@ Three tests were conducted to identify orphaned references:
 
 | Delivery-to-sweeper references | 0 orphaned assigned records | 0 rows |
 
-
-
 The tests confirmed that all non-null foreign-key references corresponded to existing records in their respective tables.
-
-
-
 NULL hub and sweeper assignments were permitted, as defined by the database schema.
 
-
-
-\## 4. Constraint Verification
-
-
-
-The database constraints were inspected using the MySQL `information\_schema.TABLE\_CONSTRAINTS` view.
-
-
-
+**Constraint Verification**
+The database constraints were inspected using the MySQL "information_schema.TABLE_CONSTRAINTS" view.
 The inspection covered:
-
-\- Primary key constraints.
-
-\- Foreign key constraints.
-
-\- Unique constraints.
-
-\- Check constraints.
-
-
-
+- Primary key constraints.
+- Foreign key constraints.
+- Unique constraints.
+- Check constraints.
 The database includes additional checks to prevent negative delivery fees and restrict delivery statuses to approved values.
-
-
-
-\*\*Result:\*\* The constraint inspection query executed successfully.
-
-
-
-\## 5. Conclusion
-
-
-
-The practical tests confirmed that the TrustSend25 database relationships are functioning as intended. No orphaned foreign-key references were identified.
-
-
-
-The results demonstrate the use of SQL joins, referential integrity checks, and database constraints to maintain data consistency and reliability.
-
+The constraint inspection query executed successfully.
